@@ -18,6 +18,8 @@ def open_and_read_file(file_path):
     first_dict = {}
     appended_dict = {}
     value_list = []
+    key_value_paired = []
+
     # key_variables = [(words[word], words[word + 1], )]
     for word in range(len(words) - 1):
         # if word in words:
@@ -26,8 +28,10 @@ def open_and_read_file(file_path):
         
         if first_dict[key_variables] not in appended_dict:
             appended_dict[words[word], words[word + 1]] = words[word]
-        for appended_dict[key_variables] in words:
-            value_list.append(words[word + 1])
+
+        if appended_dict[key_variables] in words:
+            value_list.append(words[word])
+            
         # new_tuples = (words[word], words[word + 1])
         # # print(new_tuples)
         # for new_tuples in first_dict:

@@ -87,10 +87,10 @@ def make_text(chains_dict):
     # print(words)
     
     # initialize an empty string 
-    str1 = " " 
+    word_string = " " 
     
     # return string   
-    print(str1.join(words))
+    print(word_string.join(words))
         
         
    

@@ -80,13 +80,28 @@ def make_text(chains_dict):
     """Return text from chains."""
 
     words = []
+    for key, val in chains_dict.items():
+        val = choice(chains_dict[key])
+        words.append(val) # random.choice
+            # print(words)
+    # print(words)
+    
+    # initialize an empty string 
+    str1 = " " 
+    
+    # return string   
+    print(str1.join(words))
+        
+        
+   
 
-    for key in range(len(chains_dict)):
-        if len(words) < 5:
-            words.append(chains_dict[key]) #.get maybe needed
-    print(words)
 
-    return " ".join(words)
+
+    # for text in words:
+    #     words_string += text
+    # # print(words_string)
+
+    # return f"".join(words_string)
 
 
 input_path = "green-eggs.txt"
